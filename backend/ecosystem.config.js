@@ -19,7 +19,7 @@ module.exports = {
       repo: 'https://github.com/erizoo/yandes-test-deploy',
       path: DEPLOY_PATH,
       'pre-deploy-local': `scp ./.env ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}`,
-      'post-deploy': 'npm i && npm run build',
+      'post-deploy': 'source ~/.profile && npm i && npm run build',
     },
   },
 };
